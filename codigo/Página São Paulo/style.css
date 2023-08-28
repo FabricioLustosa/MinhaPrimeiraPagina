@@ -1,0 +1,385 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(173, 9, 9, 0.4)),
+    url(./img/background-1920-985360.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border: 5px #cc1616;
+  display: flex;
+  flex-direction: column;
+}
+
+.resultados {
+  margin-top: 100px;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 50%;
+  height: 450px;
+  margin-top: 200px;
+  background: rgb(203, 21, 21);
+  padding: 10px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.tamanho-placares {
+  align-items: center;
+  justify-content: center;
+}
+.container-jogos {
+  height: 50%;
+  margin-bottom: 70px;
+}
+
+.container h1 {
+  text-shadow: 3px 3px 5px black;
+}
+
+.menu ul {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px;
+  padding: 0 108px;
+}
+
+.menu ul li:hover li {
+  display: block;
+}
+h1 {
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+  display: inline-block;
+  width: 600px;
+}
+
+a {
+  border: 2px solid #cc1616;
+  border-radius: 10px;
+  padding: 3px 10px;
+  text-transform: uppercase;
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  transition: background 0.3s;
+}
+a:hover {
+  background-color: #cc1616;
+  padding: 3px 10px;
+  border-radius: 10px;
+}
+
+.clubes {
+  width: 90px;
+  height: 90px;
+}
+
+.saopaulo-flamengo {
+  width: 620px;
+
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 5px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  transition: background 0.5s;
+}
+
+.saopaulo-palmeiras {
+  width: 620px;
+
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 10px 5px;
+  transition: background 0.5s;
+}
+.saopaulo-corinthians {
+  width: 620px;
+
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px 5px;
+  transition: background 0.5s;
+  margin-bottom: 15px;
+}
+.saopaulo-flamengo:hover {
+  background-color: rgb(255, 0, 0);
+  box-shadow: 5px 5px 5px black;
+}
+.saopaulo-palmeiras:hover {
+  background-color: rgb(255, 0, 0);
+  box-shadow: 5px 5px 5px black;
+}
+.saopaulo-corinthians:hover {
+  background-color: rgb(255, 0, 0);
+  box-shadow: 5px 5px 5px black;
+}
+
+.gracinha-placar {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0 15px;
+  color: rgba(228, 15, 15);
+  background-color: rgba(255, 255, 255);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-align: center;
+}
+.gracinha-placar:hover {
+  border: none;
+  box-shadow: 5px 5px 5px black;
+}
+
+/* JOGOS HISTORICOS */
+
+.jogos video {
+  height: 120px;
+  border-radius: 10px;
+}
+
+.jogos h2 {
+  color: aliceblue;
+  text-transform: uppercase;
+  font-size: 15px;
+  padding: 20px;
+  text-shadow: 3px 2px 4px black;
+  padding-bottom: 33px;
+}
+
+/*.jogos {
+  height: 65%;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "p p p"
+    "sl sl sl"
+    "st sb sm";
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}*/
+
+.jogos {
+  height: 65%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 90px 1fr 190px;
+  grid-template-areas:
+    "p p p"
+    "sl sl sl"
+    "st sb sm";
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+
+.jogo-principal {
+  height: 300px;
+  border-radius: 10px;
+  background-color: rgba(65, 10, 10, 0.6);
+  grid-area: sl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.jogo-principal video {
+  height: 200px;
+  transition: height 0.5s;
+}
+.jogo-principal video:hover {
+  height: 220px;
+  cursor: pointer;
+}
+.jogos h1 {
+  grid-area: p;
+  width: auto;
+  height: 100px;
+}
+.jogo-tigres {
+  grid-area: st;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.jogo-tigres video:hover {
+  height: 110px;
+  transition: height 0.5s;
+  cursor: pointer;
+}
+.jogo-barcelona {
+  grid-area: sb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.jogo-barcelona video:hover {
+  height: 110px;
+  transition: height 0.5s;
+  cursor: pointer;
+}
+.jogo-milan {
+  grid-area: sm;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.jogo-milan video:hover {
+  height: 110px;
+  transition: height 0.5s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1500px) {
+  body {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .container-jogos {
+    background-color: inherit;
+    margin-top: 150px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    font-size: 25px;
+  }
+  .menu ul li a {
+    display: flex;
+    margin: 30px;
+    justify-content: space-between;
+  }
+  .menu ul {
+    margin: 30px 30px 10px 30px;
+  }
+  .tamanho-placares {
+    width: 90%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .jogos h2 {
+    text-shadow: none;
+    color: #cc1616;
+    padding: 20px;
+    font-size: 35px;
+  }
+  .saopaulo-flamengo {
+    width: 480px;
+  }
+  .saopaulo-palmeiras {
+    width: 480px;
+  }
+  .saopaulo-corinthians {
+    width: 480px;
+  }
+  .jogos {
+    background-color: #c11212;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    box-shadow: -10px 10px 15px black;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
+  .jogo-principal {
+    width: 500px;
+    height: auto;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+  }
+  .jogo-tigres {
+    width: 500px;
+    height: auto;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  .jogo-barcelona {
+    width: 500px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+  }
+  .jogo-milan {
+    width: 500px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+
+    border-radius: 10px;
+  }
+  .jogo-principal video {
+    width: 550px;
+    height: auto;
+    padding: 30px;
+  }
+  .jogo-tigres video {
+    width: 550px;
+    height: auto;
+    padding: 30px;
+  }
+
+  .jogo-barcelona video {
+    width: 550px;
+    height: auto;
+    padding: 30px;
+  }
+  .jogo-milan video {
+    width: 550px;
+    height: auto;
+    padding: 30px;
+  }
+}
